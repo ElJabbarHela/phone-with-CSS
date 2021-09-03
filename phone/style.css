@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color:#FFF8E5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+ height: 80vmin;
+ width: 80vmin;
+ background-color: #00A19D;
+}
+.phone{
+    height: 70vmin;
+    width:40vmin;
+    background-color: #E05D5D;
+    position: absolute;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    border-radius: 3vmin;
+}
+.phone::before{
+    content:"";
+    position: absolute;
+    width: 36vmin;
+    height: 66vmin;
+    background: url("skan.jpg") no-repeat center center, linear-gradient(#383738, #f7f3f3);
+    background-size:100% 80%;  
+    top:2vmin;
+    left:2vmin;
+    border-radius: 1vmin;
+}
+.phone::after{
+    content:"";
+    position: absolute;
+    width: 36vmin;
+    height: 66vmin;
+    background:linear-gradient(rgba(77, 77, 76, 0.5),rgba(0, 0, 0, 0.5))  ;
+    top:2vmin;
+    left:2vmin;
+    border-radius: 1vmin;
+}
+.camera{
+    position: absolute;
+    width: 3vmin;
+    height: 3vmin;
+    background-color: #1c1d1d;
+    border-radius: 50%;
+    top:5vmin;
+    left:4vmin;
+     z-index: 5;
+    /* pour créer une copie du caméra */
+    box-shadow: 29vmin 0 0 0 #1c1d1d;
+}
+.camera::before{
+    content: "";
+    position: absolute;
+    width: 7vmin;
+    height: 1.5vmin;
+    background-color: #1c1d1d;
+    left:12vmin;
+    border-radius: 2vmin;
+}
+.button-container{
+    position: absolute;
+    width: 36vmin;
+    height: 15vmin;
+    background-color: #3b3b3b;
+    z-index: 10; 
+    bottom: 2vmin;
+    left: 2vmin;
+    border-radius: 3vmin 3vmin 0 0;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding-inline: 2vmin;
+
+}
+.btn{
+    height: 6vmin;
+    width:6vmin ;
+    background-color: #a2a3a3;
+    z-index:8;
+    border-radius: 50%;
+    /* border:.5vmin solid #FFB344; */
+}
+.btn:last-child{
+    background-color: rgba(248, 4, 4, 0.6) ;
+}
+/* Modifier le child N° 2 (La numérotation commence par 1) */
+.btn:nth-child(2){
+    background-color:rgba(255,255,255);
+}
+.btn:first-child::after{
+    content:"";
+    position: absolute;
+    width: 6vmin;
+    height: 1.5vmin;
+    background-color: #a2a3a3;
+    border-radius: 2vmin;
+    top:.9vmin;
+    left:15vmin
+}
+.avatar{
+    width:10vmin;
+    height:10vmin;
+    border-radius: 50%;
+    background-image:url("fleur.jpg") ;
+    background-position: center;
+    background-size: 100%;
+    z-index: 9999;
+    position: absolute;
+    left:11vmin;
+    top: 8vmin;
+}
+.avatar::after{
+    content:"EL JABBAR Hela";
+    position: absolute;
+    top: 11vmin;
+    white-space: nowrap;
+    right:-7vmin;
+    color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+}
+.video{
+    width: 9vmin;
+    height: 3vmin;
+    background-color: rgb(202, 199, 199);
+    position: absolute;
+    top:6vmin;
+    right:-30vmin;
+    border-radius: 2vmin;
+ }
+ .video::after{
+     content:"";
+     position: absolute;
+     width: 5vmin;
+     height:5vmin;
+     border-radius: 50%;
+     background-color: white;
+     top:-1vmin;
+ }
+ .video::before{
+     content:"";
+     position: absolute;
+     width: 3vmin;
+     height:3vmin;
+     border-radius: 50%;
+     background-color: rgb(0, 0, 0);
+     left:1vmin;
+     z-index: 999;
+ }
+ .fleche{
+     height: .5vmin;
+     width:3vmin;
+     background-color: white;
+     position: absolute;
+     top:7vmin;
+ }
+ .fleche::after,.fleche::before{
+    content:"";
+    position: absolute;
+    width:2vmin;
+    height: .5vmin;
+    background-color: white;
+    
+ }
+ .fleche::before{
+     transform: rotate(45deg);
+     top:.8vmin;
+ }
+ .fleche::after{
+    transform: rotate(-45deg);
+    bottom:.8vmin;
+}
